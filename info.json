@@ -1,0 +1,14 @@
+{
+    "author": [
+        "Matters86"
+    ],
+    "name": "Matters-Cogs",
+    "short": "Cogs für Red-DiscordBot V3.",
+    "description": "Cogs für Red-DiscordBot V3.",
+    "install_msg": "Danke.",
+    "tags": [
+        "general",
+        "utility",
+        "fun"
+    ]
+}
