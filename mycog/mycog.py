@@ -1,4 +1,5 @@
 from redbot.core import commands
+import aiohttp
 
 class MyCog(commands.Cog):
     """My custom cog"""
@@ -14,5 +15,8 @@ class MyCog(commands.Cog):
 
     @commands.command()
     async def push(self, ctx):
-        await ctx.send("blubberwasser")
-    
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://api.restful-api.dev/objects') as response:
+                html = await response.text()
+                myObject = json.loads(html)
+                await ctx.send(myObject[1]['name'])
