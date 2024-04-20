@@ -31,6 +31,5 @@ class MyCog(commands.Cog):
 
     @commands.command()
     async def addToken(self, ctx):
-        self.config.set({"birthday": {"year": 1, "month": 1, "day": 1}})
         await ctx.send('Add Token')
 
