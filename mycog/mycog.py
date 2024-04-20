@@ -19,7 +19,7 @@ class MyCog(commands.Cog):
     from discord.ext import tasks
 
     @tasks.loop(seconds=30)
-    async def show(self):
+    async def show(self, ctx):
         print('Hallo Welt')
 
 
