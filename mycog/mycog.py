@@ -6,6 +6,7 @@ class MyCog(commands.Cog):
     """My custom cog"""
 
     def __init__(self, bot):
+        print('Start system')
         self.bot = bot
         self.show.start()
 
