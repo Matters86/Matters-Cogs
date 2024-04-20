@@ -1,5 +1,6 @@
 from redbot.core import commands
 import aiohttp
+import json
 
 class MyCog(commands.Cog):
     """My custom cog"""
