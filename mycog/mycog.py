@@ -7,6 +7,7 @@ class MyCog(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+        self.show.start()
 
     @commands.command()
     async def mycom(self, ctx):
