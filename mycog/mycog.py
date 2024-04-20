@@ -11,3 +11,8 @@ class MyCog(commands.Cog):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("I can do stuff!")
+
+    @commands.command()
+    async def push(self, ctx):
+        await ctx.send("blubberwasser")
+    
