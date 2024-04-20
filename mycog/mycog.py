@@ -18,8 +18,8 @@ class MyCog(commands.Cog):
     from discord.ext import tasks
 
     @tasks.loop(seconds=30)
-    async def show(self, ctx):
-        await ctx.send("I can do stuff!")
+    async def show(self):
+        print('Hallo Welt')
 
 
     @commands.command()
