@@ -10,7 +10,6 @@ class MyCog(commands.Cog):
         print('Please wait while Bot started')
         self.bot = bot
         self.config = Config.get_conf(self, identifier=7888, force_registration=True)
-        self.register_global(bot={})
         print('Bot ready')
         print('Commands: "hello", "addToken"')
 
@@ -22,6 +21,6 @@ class MyCog(commands.Cog):
 
     @commands.command()
     async def addToken(self, ctx):
-        self.config.bot.set({ 'token_test': 'abcdef'})
+        self.config.set({ 'token_test': 'abcdef'})
         await ctx.send('Add Token')
 
