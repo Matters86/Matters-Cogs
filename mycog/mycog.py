@@ -1,4 +1,5 @@
-from redbot.core import commands
+from redbot.core import commands, tasks
+#from discord.ext import tasks
 import aiohttp
 import json
 
@@ -8,6 +9,7 @@ class MyCog(commands.Cog):
     def __init__(self, bot):
         print('Start system')
         self.bot = bot
+        self.counter = 0
         self.show.start()
 
     @commands.command()
@@ -16,11 +18,10 @@ class MyCog(commands.Cog):
         # Your code will go here
         await ctx.send("I can do stuff!")
 
-    from discord.ext import tasks
-
     @tasks.loop(seconds=30)
-    async def show(self, ctx):
-        print('Hallo Welt')
+    async def show(self):
+        print(self.counter)
+        self.counter += 1
 
 
     @commands.command()
