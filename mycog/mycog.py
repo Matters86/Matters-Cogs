@@ -11,7 +11,15 @@ class MyCog(commands.Cog):
         print('Please wait while Bot started')
         self.bot = bot
         self.config = Config.get_conf(self, identifier=7888, force_registration=True)
-        self.config.register_global(version=0)
+        default_global = {
+            "messages": [],
+            "images": [],
+            "time": {"hour": 0, "minute": 0, "second": 0},
+        }
+        default_guild = {"channelid": None}
+
+        self.config.register_global(**default_global)
+        self.config.register_guild(**default_guild)
         print('Bot ready')
         print('Commands: "hello", "addToken"')
 
