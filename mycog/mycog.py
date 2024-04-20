@@ -1,5 +1,5 @@
-from redbot.core import commands
 from discord.ext import tasks
+from redbot.core import Config, commands
 import aiohttp
 import json
 
@@ -7,27 +7,21 @@ class MyCog(commands.Cog):
     """My custom cog"""
 
     def __init__(self, bot):
-        print('Start system')
+        print('Please wait while Bot started')
         self.bot = bot
-        self.counter = 0
-        self.show.start()
+        self.config = Config.get_conf(self, identifier=7888, force_registration=True)
+        self.register_global(bot={})
+        print('Bot ready')
+        print('Commands: "hello", "addToken"')
 
     @commands.command()
-    async def mycom(self, ctx):
+    async def hello(self, ctx):
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("I can do stuff!")
-
-    @tasks.loop(seconds=30)
-    async def show(self):
-        print(self.counter)
-        self.counter += 1
-
+        await ctx.send("Hello from my Bot!")
 
     @commands.command()
-    async def push(self, ctx):
-        async with aiohttp.ClientSession() as session:
-            async with session.get('https://api.restful-api.dev/objects') as response:
-                html = await response.text()
-                myObject = json.loads(html)
-                await ctx.send(myObject[1]['name'])
+    async def addToken(self, ctx):
+        self.config.bot.set({ 'token_test': 'abcdef'})
+        await ctx.send('Add Token')
+
