@@ -14,6 +14,13 @@ class MyCog(commands.Cog):
         # Your code will go here
         await ctx.send("I can do stuff!")
 
+    from discord.ext import tasks
+
+    @tasks.loop(seconds=30)
+    async def show(self, ctx):
+        await ctx.send("I can do stuff!")
+
+
     @commands.command()
     async def push(self, ctx):
         async with aiohttp.ClientSession() as session:
