@@ -1,0 +1,25 @@
+{
+    "author": [
+        "Matters86"
+    ],
+    "name": "statevapi",
+    "install_msg": "Installation erfolgreich!.",
+    "description": "GTA 5 StateV RP Server API Connector!",
+    "short": "StateV API Connector",
+    "hidden": false,
+    "min_bot_version": "3.5.3",
+    "tags": [
+        "StateV API"
+    ],
+    "permissions": [
+        "embed_links"
+    ],
+    "requirements": ["emoji"],
+    "min_python_version": [
+        3,
+        9,
+        0
+    ],
+    "end_user_data_statement": "This cog records messages sent and Discord IDs for the purpose of StateV Informations.",
+    "type": "COG"
+}
