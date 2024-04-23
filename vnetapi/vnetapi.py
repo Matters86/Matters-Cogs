@@ -5,7 +5,7 @@ import aiohttp
 import json
 import discord
 
-class statevapi(commands.Cog):
+class vnetapi(commands.Cog):
     """StateV API Connector"""
 
     def __init__(self, bot):
