@@ -42,7 +42,7 @@ class vnetapi(commands.Cog):
     #Permission: Nur der Servereigentümer kann das ändern
     @commands.command()
     @commands.is_owner()
-    async def addToken(self, ctx, new_value):
+    async def addapitoken(self, ctx, new_value):
         await self.config.guild(ctx.guild).statevtoken.set(new_value)                                           #Setzen des Tokens
         await ctx.send('StateV Token changed')                                                                  #Rückgabe
 
