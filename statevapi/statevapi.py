@@ -5,7 +5,7 @@ import aiohttp
 import json
 import discord
 
-class MyCog(commands.Cog):
+class statevapi(commands.Cog):
     """StateV API Connector"""
 
     def __init__(self, bot):
@@ -16,7 +16,7 @@ class MyCog(commands.Cog):
         
         #Globalen Einstellungen - Serverübergreifend !!!
         default_global = {                                              
-            "name": "Dev Bot",
+            "name": "Dev_Bot",
             "author": "Matters86"
         }
         self.config.register_global(**default_global)
