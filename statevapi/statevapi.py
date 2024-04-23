@@ -32,7 +32,7 @@ class statevapi(commands.Cog):
 
     #Command - Ein kurzes Hallo vom Bot
     @commands.command()
-    async def hello(self, ctx):
+    async def saysomething(self, ctx):
         author = self.config.author                                                                             #Laden des Authors aus der Config
         name = self.config.name                                                                                 #Laden des Namens aus der Config
         await ctx.send(("Hello from {botname} created by {author}!").format(botname=name, author=author))       #Rückgabe
